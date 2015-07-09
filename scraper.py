@@ -13,4 +13,4 @@ compteur = 0;
 output = open('donnees.csv', "w")
 fdonnees = csv.writer(output, delimiter = ';')
 
-print('Traitement complété')
+print('Traitement complete')
