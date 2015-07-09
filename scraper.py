@@ -1,20 +1,9 @@
-
-import csv
 import time
-import requests
+import urllib
 import re
+import csv
+import tweepy
 
-from bs4 import BeautifulSoup
-
-# Compteur pour identifier les projets
-compteur = 0;
-
-# Ouverture du fichier pour sauvegarder les donnees du scraping
-output = open('donnees.csv', "w")
-fdonnees = csv.writer(output, delimiter = ';')
-
-r = requests.get('https://fairemtl.ca/fr/application-navigation-vers-stationnement-disponible')
-# print(r.content)
-soup = BeautifulSoup(r.content, 'html.parser')
-print(soup.get_text())
-print('Traitement complete')
+HTML = urllib.urlopen("http://fairemtl.ca").read()
+HTML = re.search('<h1>', HTML, re.S)
+print(HTML)
