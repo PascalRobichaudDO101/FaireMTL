@@ -14,5 +14,7 @@ output = open('donnees.csv', "w")
 fdonnees = csv.writer(output, delimiter = ';')
 
 r = requests.get('https://fairemtl.ca/fr/application-navigation-vers-stationnement-disponible')
-print(r.content)
+# print(r.content)
+soup = BeautifulSoup(r.content, 'html.parser')
+print(soup.get_text())
 print('Traitement complete')
