@@ -7,3 +7,7 @@
 
 lxml==3.4.4
 cssselect==0.9.1
+BeautifulSoup==3.2.0
+csvkit==0.3.0
+requests==1.0.4
+Unidecode==0.04.9
