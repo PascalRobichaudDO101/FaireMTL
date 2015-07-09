@@ -4,7 +4,7 @@ import time
 import requests
 import re
 
-import BeautifulSoup
+from bs4 import BeautifulSoup
 
 # Compteur pour identifier les projets
 compteur = 0;
