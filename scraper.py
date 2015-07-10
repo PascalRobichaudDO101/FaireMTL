@@ -19,4 +19,8 @@ if (r.status_code == requests.codes.ok):
   
   
   
+  print('Fin du traitement')
+  
+  
+  
   
