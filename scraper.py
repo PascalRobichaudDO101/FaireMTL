@@ -1,6 +1,6 @@
 import requests
 
-r = requests.get('https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible', verify=True, prefetch=True)
+r = requests.get('https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible', prefetch=True)
 
 if (r.status_code == requests.codes.ok):
 
