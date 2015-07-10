@@ -1,6 +1,6 @@
 import requests
 
-import bs4
+#import bs4
 from bs4 import BeautifulSoup
 
 r = requests.get('https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible')
