@@ -5,8 +5,8 @@ r = requests.get('https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-
 
 if (r.status_code == requests.codes.ok):
 
+  #print(r.headers)
   #print(r.content)
-  print(r.headers)
   #print(r.text)
   
   
