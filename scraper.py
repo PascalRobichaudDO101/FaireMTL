@@ -20,12 +20,13 @@ from bs4 import BeautifulSoup
 
 source_url = 'https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible'
 html = urllib.urlopen(source_url)
-print(type(html))
+#print(type(html))
 #html = html.decode('utf8')
 soup = BeautifulSoup(html)
 #print(soup.prettify())
 
 projet = soup.find("title")
+print(type(projet))
 #print(projet.getText())
 
 description = soup.find("div",{"class":"field field-name-body field-type-text-with-summary field-label-hidden"})
