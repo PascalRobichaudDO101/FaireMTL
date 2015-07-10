@@ -1,7 +1,15 @@
 import requests
 
-#import bs4
-import BeautifulSoup
+from bs4 import BeautifulSoup
+
+#import urllib
+#from bs4 import BeautifulSoup
+#from bs4 import NavigableString
+#import csv 
+ #   html = urllib.urlopen(source_url)
+ #   soup = BeautifulSoup(html)
+ #   links = soup.findAll('a', {'title':'View opportunity'})
+ #   return links
 
 r = requests.get('https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible')
 
