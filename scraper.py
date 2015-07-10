@@ -21,8 +21,8 @@ html = urllib.urlopen(source_url)
 soup = BeautifulSoup(html)
 #print(soup.prettify())
 
-projet = soup.find("title", text=True)
-print(projet)
+projet = soup.find("title")
+print(projet.getText())
 
 description = soup.find("div",{"class":"field field-name-body field-type-text-with-summary field-label-hidden"})
 print(description)
