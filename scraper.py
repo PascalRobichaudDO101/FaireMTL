@@ -21,6 +21,7 @@ html = urllib.urlopen(source_url)
 soup = BeautifulSoup(html)
 titre_projet = soup.findAll('title')
 print(titre_projet)
+print(titre_projet)
     
 r = requests.get(source_url)
 #r = requests.get('http://tinyurl.com/do101mtl')
