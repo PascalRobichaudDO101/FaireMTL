@@ -1,5 +1,5 @@
 import requests
-import BeautifulSoup
+from bs4 import BeautifulSoup
 
 r = requests.get('https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible')
 
@@ -17,8 +17,8 @@ if (r.status_code == requests.codes.ok):
   #print(r.encoding)
   #r.encoding = 'ISO-8859-1'
   #print(r.encoding)
-
-  soup = BeautifulSoup(la_page, 'html.parser')
+  soup = bs4.BeautifulSoup(la_page)
+  #soup = BeautifulSoup(la_page, 'html.parser')
   print(soup)
   
   print('Fin du traitement')
