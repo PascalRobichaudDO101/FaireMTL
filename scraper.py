@@ -20,7 +20,7 @@ source_url = 'https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disp
 html = urllib.urlopen(source_url)
 soup = BeautifulSoup(html)
 description = soup.findAll("div",{"class":"field field-name-body field-type-text-with-summary field-label-hidden"})
-description2 = description[0].getText().strip()
+description2 = description[0].getText()
 print(description2)
 #print(titre_projet)
     
