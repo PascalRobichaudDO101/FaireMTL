@@ -5,4 +5,5 @@ r = requests.get('https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-
 
 
 #print(r.content)
-print(r.text)
+print(r.headers)
+#print(r.text)
