@@ -5,7 +5,9 @@ r = requests.get('https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-
 
 if (r.status_code == requests.codes.ok):
 
-  value = unicode(r.text, "utf-8")
+  value = r.text.encode('ascii', 'ignore')
+  #value = unicode(r.text, "utf-8")
+  
   #print(r.encoding)
   #r.encoding = 'ISO-8859-1'
   #print(r.encoding)
