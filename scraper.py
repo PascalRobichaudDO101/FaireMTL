@@ -3,7 +3,6 @@
 #import requests
 import urllib
 from bs4 import BeautifulSoup
-import re
 #from bs4 import NavigableString
 
 #from bs4 import BeautifulSoup
@@ -30,13 +29,9 @@ print(description)
 onglet_commentaires = soup.find("a",{"href":"#tabs-0-footer-2"})
 
 #Extraire le chiffre du libellé de l'onglet
-for item in onglet_commentaires:
-    nombre_commentaires1 = re.findall(r'[0-9]+', item.text)
-    
-nombre_commentaires2 = nombre_commentaires1[0]
 
 #Afficher le nombre de commentaire (pour du débuggage)
-print("Nombre de commentaires: %s" % nombre_commentaires2)	   
+print("Nombre de commentaires: %s" % onglet_commentaires)	   
 
 
 
