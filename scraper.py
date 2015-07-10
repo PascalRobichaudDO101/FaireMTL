@@ -3,6 +3,7 @@
 #import requests
 import urllib
 from bs4 import BeautifulSoup
+import re
 #from bs4 import NavigableString
 
 #from bs4 import BeautifulSoup
