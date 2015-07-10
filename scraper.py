@@ -3,8 +3,8 @@
 #import requests
 import urllib
 from bs4 import BeautifulSoup
-import encode
-import decode
+#import encode
+#import decode
 #from bs4 import NavigableString
 
 #from bs4 import BeautifulSoup
@@ -20,12 +20,13 @@ import decode
 
 source_url = 'https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible'
 html = urllib.urlopen(source_url)
-html = html.decode('utf8')
+print(type(html))
+#html = html.decode('utf8')
 soup = BeautifulSoup(html)
 #print(soup.prettify())
 
 projet = soup.find("title")
-print(projet.getText())
+#print(projet.getText())
 
 description = soup.find("div",{"class":"field field-name-body field-type-text-with-summary field-label-hidden"})
 print(description)
