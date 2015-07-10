@@ -10,7 +10,7 @@ if (r.status_code == requests.codes.ok):
   #print(r.content)
   #print(r.text)
 
-  value = r.text.encode('ascii', 'ignore')
+  la_page = r.text.encode('ascii', 'ignore')
   #print(value)
   #value = unicode(r.text, "utf-8")
   
@@ -18,8 +18,8 @@ if (r.status_code == requests.codes.ok):
   #r.encoding = 'ISO-8859-1'
   #print(r.encoding)
 
-  
-  
+  soup = BeautifulSoup(la_page, 'html.parser')
+  print(soup)
   
   print('Fin du traitement')
   
