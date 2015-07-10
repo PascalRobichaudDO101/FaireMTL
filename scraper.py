@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*- 
 
 import requests
+import urllib
+from bs4 import BeautifulSoup
+from bs4 import NavigableString
 
 #from bs4 import BeautifulSoup
 
