@@ -19,8 +19,8 @@ from bs4 import NavigableString
 source_url = 'https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible'
 html = urllib.urlopen(source_url)
 soup = BeautifulSoup(html)
-#links = soup.findAll('a', {'title':'View opportunity'})
-#return links
+titre_projet = soup.findAll('title')
+print(titre_projet)
     
 r = requests.get(source_url)
 #r = requests.get('http://tinyurl.com/do101mtl')
@@ -33,7 +33,7 @@ if (r.status_code == requests.codes.ok):
   #print(r.text)
 
   la_page = r.text.encode('ascii', 'ignore')
-  print(la_page)
+  #print(la_page)
   #value = unicode(r.text, "utf-8")
   
   #print(r.encoding)
