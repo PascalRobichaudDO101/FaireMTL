@@ -28,7 +28,7 @@ soup = BeautifulSoup(html)
 projet = soup.find("title")
 print(type(projet))
 print(projet.name)
-print(projet.string)
+print(unicode(projet.string))
 #print(projet.getText())
 
 description = soup.find("div",{"class":"field field-name-body field-type-text-with-summary field-label-hidden"})
