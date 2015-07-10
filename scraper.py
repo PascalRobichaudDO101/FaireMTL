@@ -1,6 +1,6 @@
 import requests
 
-r = requests.get('https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible')
+r = requests.get('https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible', verify=True)
 
 
 
