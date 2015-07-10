@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*- 
 
-import requests
+#import requests
 import urllib
 from bs4 import BeautifulSoup
 from bs4 import NavigableString
@@ -23,17 +23,17 @@ titre_projet = soup.findAll('title')
 print(titre_projet)
 print(titre_projet)
     
-r = requests.get(source_url)
+#r = requests.get(source_url)
 #r = requests.get('http://tinyurl.com/do101mtl')
 
-if (r.status_code == requests.codes.ok):
+#if (r.status_code == requests.codes.ok):
 
   #print(r.url)
   #print(r.headers)
   #print(r.content)
   #print(r.text)
 
-  la_page = r.text.encode('ascii', 'ignore')
+  #la_page = r.text.encode('ascii', 'ignore')
   #print(la_page)
   #value = unicode(r.text, "utf-8")
   
@@ -44,9 +44,7 @@ if (r.status_code == requests.codes.ok):
   #soup = BeautifulSoup(la_page, 'html.parser')
   #print(soup)
   
-  
-  
-  print('Fin du traitement')
+print('Fin du traitement')
   
   
   
