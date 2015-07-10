@@ -22,6 +22,7 @@ soup = BeautifulSoup(html)
 description = soup.findAll("div",{"class":"field field-name-body field-type-text-with-summary field-label-hidden"})
 
 #description2 = description[0].getText()
+print(description.encoding)
 print(description)
 #print(titre_projet)
     
