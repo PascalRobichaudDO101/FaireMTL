@@ -28,6 +28,7 @@ soup = BeautifulSoup(html)
 projet = soup.find("title")
 print(type(projet))
 print(projet.name)
+print(projet)
 print(unicode(projet.string))
 #print(projet.getText())
 
