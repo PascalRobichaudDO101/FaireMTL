@@ -16,7 +16,9 @@ from bs4 import NavigableString
  #   links = soup.findAll('a', {'title':'View opportunity'})
  #   return links
 
-r = requests.get('https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible')
+source_url = 'https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible'
+html = urllib.urlopen(source_url)
+r = requests.get(source_url)
 #r = requests.get('http://tinyurl.com/do101mtl')
 
 if (r.status_code == requests.codes.ok):
