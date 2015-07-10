@@ -19,6 +19,7 @@ from bs4 import BeautifulSoup
 source_url = 'https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible'
 html = urllib.urlopen(source_url)
 soup = BeautifulSoup(html)
+print(soup.prettify())
 
 projet = soup.find("title")
 print(projet)
