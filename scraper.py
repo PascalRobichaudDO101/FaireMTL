@@ -16,8 +16,12 @@ from bs4 import NavigableString
  #   links = soup.findAll('a', {'title':'View opportunity'})
  #   return links
 
-source_url = 'https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible'
-html = urllib.urlopen(source_url)
+ source_url = 'https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible'
+ html = urllib.urlopen(source_url)
+ soup = BeautifulSoup(html)
+ #links = soup.findAll('a', {'title':'View opportunity'})
+ #return links
+    
 r = requests.get(source_url)
 #r = requests.get('http://tinyurl.com/do101mtl')
 
