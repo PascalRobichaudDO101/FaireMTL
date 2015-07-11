@@ -26,18 +26,18 @@ import Unidecode
 source_url = 'https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible'
 html = urllib.urlopen(source_url)
 #html = html.Unidecode('utf-8', errors='replace')
-html = html.Unidecode('utf-8')
+#html = html.Unidecode('utf-8')
 #print(type(html))
 #html = html.decode('utf8')
 soup = BeautifulSoup(html)
 #print(soup.prettify())
 
 projet = soup.find("title")
-print(type(projet))
-print(projet.name)
+#print(type(projet))
+#print(projet.name)
 print(projet)
 #print(unicode(projet.string))
-print(projet.getText())
+#print(projet.getText())
 
 description = soup.find("div",{"class":"field field-name-body field-type-text-with-summary field-label-hidden"})
 print(description)
