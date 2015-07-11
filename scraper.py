@@ -32,17 +32,17 @@ html = urllib.urlopen(source_url)
 soup = BeautifulSoup(html)
 #print(soup.prettify())
 
-projet = soup.find("title")
+projet = soup.find('title')
 #print(type(projet))
 #print(projet.name)
 print(projet)
 #print(unicode(projet.string))
 #print(projet.getText())
 
-description = soup.find("div",{"class":"field field-name-body field-type-text-with-summary field-label-hidden"})
+description = soup.find('div',{"class":"field field-name-body field-type-text-with-summary field-label-hidden"})
 print(description)
 
-onglet_commentaires = soup.find("a",{"href":"#tabs-0-footer-2"})
+onglet_commentaires = soup.find('a',{"href":"#tabs-0-footer-2"})
 
 #Extraire le chiffre du libellé de l'onglet
 
