@@ -8,7 +8,7 @@ import chardet
 import urllib
 from bs4 import BeautifulSoup
 #import encode
-#import decode
+import decode
 #from bs4 import NavigableString
 
 #from bs4 import BeautifulSoup
