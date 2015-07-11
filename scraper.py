@@ -7,7 +7,7 @@ from __future__ import unicode_literals
 import chardet
 import urllib
 from bs4 import BeautifulSoup
-import Unidecode
+#import Unidecode
 #import encode
 #import decode
 #from bs4 import NavigableString
