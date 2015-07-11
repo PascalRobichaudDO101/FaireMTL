@@ -33,7 +33,7 @@ soup = BeautifulSoup(html)
 #print(soup.prettify())
 
 #projet = soup.find('title')
-projet = soup.find("meta", {"name":"title"})['content']
+projet = soup.find('meta', {'name':'title'})['content']
 #print(type(projet))
 #print(projet.name)
 print(projet)
