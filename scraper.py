@@ -33,10 +33,11 @@ soup = BeautifulSoup(html)
 #print(soup.prettify())
 
 projet = soup.find('title')
+print(projet.string)
 #projet = soup.find('meta', {'name':'title'})['content']
 #print(type(projet))
 #print(projet.name)
-print(projet.strip)
+#print(projet.strip)
 #print(unicode(projet.string))
 #print(projet.getText())
 
