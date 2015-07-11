@@ -1,6 +1,10 @@
 # coding: utf8
 
+# toutes les chaines sont en unicode (même les docstrings)
+from __future__ import unicode_literals
+
 #import requests
+import chardet
 import urllib
 from bs4 import BeautifulSoup
 #import encode
@@ -20,6 +24,7 @@ from bs4 import BeautifulSoup
 
 source_url = 'https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible'
 html = urllib.urlopen(source_url)
+html = html.decode('utf-8')
 #print(type(html))
 #html = html.decode('utf8')
 soup = BeautifulSoup(html)
