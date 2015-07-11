@@ -7,8 +7,9 @@ from __future__ import unicode_literals
 import chardet
 import urllib
 from bs4 import BeautifulSoup
+import Unidecode
 #import encode
-import decode
+#import decode
 #from bs4 import NavigableString
 
 #from bs4 import BeautifulSoup
@@ -24,7 +25,8 @@ import decode
 
 source_url = 'https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible'
 html = urllib.urlopen(source_url)
-html = html.decode('utf-8', errors='replace')
+#html = html.Unidecode('utf-8', errors='replace')
+html = html.Unidecode('utf-8')
 #print(type(html))
 #html = html.decode('utf8')
 soup = BeautifulSoup(html)
