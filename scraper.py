@@ -22,6 +22,11 @@ class MySum:
     def finalize(self):
         return self.count
 
+from datetime import datetime, date, time
+import sqlite3
+import urllib
+from bs4 import BeautifulSoup
+
 con = sqlite3.connect(":memory:")
 con.create_aggregate("mysum", 1, MySum)
 cur = con.cursor()
@@ -30,11 +35,6 @@ cur.execute("insert into test(i) values (1)")
 cur.execute("insert into test(i) values (2)")
 cur.execute("select mysum(i) from test")
 print cur.fetchone()[0]
-
-from datetime import datetime, date, time
-import sqlite3
-import urllib
-from bs4 import BeautifulSoup
 
 traitement_debut = datetime.now() 
 print("Début du traitement: %s " % traitement_debut)
