@@ -17,10 +17,10 @@ import sqlite3
 import urllib
 from bs4 import BeautifulSoup
 
-con = sqlite3.connect('url.db')
-cur = con.cursor()
-cur.execute("select * from url")
-print cur.fetchone()
+#con = sqlite3.connect('url.db')
+#cur = con.cursor()
+#cur.execute("select * from url")
+#print cur.fetchone()
 
 traitement_debut = datetime.now() 
 print("Début du traitement: %s " % traitement_debut)
