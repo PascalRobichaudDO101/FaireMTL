@@ -55,7 +55,7 @@ nombre_appuis = soup.find_all('div',{'class':'pill js-support_project'})
 nombre_appuis2 = nombre_appuis[0].getText().strip()
 position_espace = nombre_appuis2.find(' ')
 nombre_appuis2 = left(nombre_appuis2, position_espace - 1)
-#print("Nombre d'appuis:        %s" % nombre_appuis2)
+print("Nombre d'appuis:        %s" % nombre_appuis2)
 
 #Fin du traitement
 traitement_fin = datetime.now() 
