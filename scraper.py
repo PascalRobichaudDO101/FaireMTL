@@ -31,7 +31,7 @@ onglet_commentaires = onglet_commentaires.replace("Commentaires (","")
 onglet_commentaires = onglet_commentaires.replace(")","")
 
 # Afficher le nombre de commentaires
-#print("Nombre de commentaires: %s" % onglet_commentaires.decode('utf-8'))	   
+print("Nombre de commentaires: %s" % onglet_commentaires)	   
 
 #2. Nombre d'abonnés
 #nombre_abonnes = soup.find_all('div',{'class':'pill js-subscribe_section_content'}, encode="utf-8")
