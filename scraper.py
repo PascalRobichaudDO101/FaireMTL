@@ -12,30 +12,15 @@ def left(s, amount = 1, substring = ""):
            substring = substring[:amount]
         return substring + s[:-amount]
 
-class MySum:
-    def __init__(self):
-        self.count = 0
-
-    def step(self, value):
-        self.count += value
-
-    def finalize(self):
-        return self.count
-
 from datetime import datetime, date, time
 import sqlite3
 import urllib
 from bs4 import BeautifulSoup
 
-#con = sqlite3.connect(":memory:")
-con = sqlite3.connect('data.db')
-con.create_aggregate("mysum", 1, MySum)
+con = sqlite3.connect('url.db')
 cur = con.cursor()
-cur.execute("create table test(i)")
-cur.execute("insert into test(i) values (1)")
-cur.execute("insert into test(i) values (2)")
-cur.execute("select mysum(i) from test")
-print cur.fetchone()[0]
+cur.execute("select * from url")
+print cur.fetchone()
 
 traitement_debut = datetime.now() 
 print("Début du traitement: %s " % traitement_debut)
