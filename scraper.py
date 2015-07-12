@@ -4,13 +4,13 @@
 # coding: utf8
 
 #Fonction left
-def left(s, amount = 1, substring = ""):
-    if (substring == ""):
-        return s[:amount]
-    else:
-        if (len(substring) > amount):
-            substring = substring[:amount]
-        return substring + s[:-amount]
+#def left(s, amount = 1, substring = ""):
+#    if (substring == ""):
+#        return s[:amount]
+#    else:
+#        if (len(substring) > amount):
+#           substring = substring[:amount]
+#        return substring + s[:-amount]
 
 import urllib
 from bs4 import BeautifulSoup
