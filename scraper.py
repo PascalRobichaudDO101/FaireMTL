@@ -13,6 +13,7 @@ def left(s, amount = 1, substring = ""):
         return substring + s[:-amount]
 
 from datetime import datetime, date, time
+import sqlite3
 import urllib
 from bs4 import BeautifulSoup
 
