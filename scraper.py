@@ -46,8 +46,8 @@ nombre_adonnes2 = nombre_abonnes[0].getText().strip()
 #nombre_adonnes2 = left(nombre_adonnes2, position_espace - 1)
 #print("Nombre d'abonnés:       %s" % nombre_adonnes2)
   
-print('Fin du traitement')
-  
-  
+#Fin du traitement
+fin_traitement = datetime.now() 
+print("Fin du traitement: %s " % fin_traitement)
   
   
