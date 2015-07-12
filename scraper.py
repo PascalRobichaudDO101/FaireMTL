@@ -45,7 +45,7 @@ nombre_adonnes2 = nombre_abonnes[0].getText().strip()
 position_espace = nombre_adonnes2.find(' ')
 nombre_adonnes2 = left(nombre_adonnes2, position_espace - 1)
 #print("Nombre d'abonnés:       %s" % nombre_adonnes2)
-print("Nombre de abonnés: %s" % nombre_adonnes2)
+print("Nombre de abonnes: %s" % nombre_adonnes2)
 #print(nombre_adonnes2)
   
 #Fin du traitement
