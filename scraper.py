@@ -33,7 +33,7 @@ soup = BeautifulSoup(html)
 #print(soup.prettify())
 
 projet = soup.find_all('title')
-print(projet[0].getText().strip())
+#print(projet[0].getText().strip())
 #projet = soup.find('meta', {'name':'title'})['content']
 #print(type(projet))
 #print(projet.name)
@@ -41,8 +41,8 @@ print(projet[0].getText().strip())
 #print(unicode(projet.string))
 #print(projet.getText())
 
-description = soup.find('div',{"class":"field field-name-body field-type-text-with-summary field-label-hidden"})
-print(description)
+#description = soup.find('div',{"class":"field field-name-body field-type-text-with-summary field-label-hidden"})
+#print(description)
 
 onglet_commentaires = soup.find('a',{"href":"#tabs-0-footer-2"})
 
@@ -50,9 +50,6 @@ onglet_commentaires = soup.find('a',{"href":"#tabs-0-footer-2"})
 
 #Afficher le nombre de commentaire (pour du débuggage)
 print("Nombre de commentaires: %s" % onglet_commentaires)	   
-
-
-
     
 #r = requests.get(source_url)
 #r = requests.get('http://tinyurl.com/do101mtl')
