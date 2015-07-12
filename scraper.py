@@ -27,7 +27,8 @@ import sqlite3
 import urllib
 from bs4 import BeautifulSoup
 
-con = sqlite3.connect(":memory:")
+#con = sqlite3.connect(":memory:")
+conn = sqlite3.connect('data.db')
 con.create_aggregate("mysum", 1, MySum)
 cur = con.cursor()
 cur.execute("create table test(i)")
