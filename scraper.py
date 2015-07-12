@@ -49,5 +49,8 @@ nombre_adonnes2 = nombre_abonnes[0].getText().strip()
 #Fin du traitement
 fin_traitement = datetime.now() 
 print("Fin du traitement: %s " % fin_traitement)
+
+duree = fin_traitement - debut_traitement
+print(duree)
   
   
