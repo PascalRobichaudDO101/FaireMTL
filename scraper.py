@@ -18,7 +18,7 @@ from bs4 import BeautifulSoup
 # Page à scraper
 #source_url = 'https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible'
 source_url = 'https://fairemtl.ca/fr/24h-linnovation-volet-ville-intelligente'
-#print("Page: %s" % source_url)
+print("Page: %s" % source_url)
 html = urllib.urlopen(source_url)
 
 #Mettre la code de la page dans BeautifulSoup
