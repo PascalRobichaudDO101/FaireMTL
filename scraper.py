@@ -16,8 +16,8 @@ from datetime import datetime, date, time
 import urllib
 from bs4 import BeautifulSoup
 
-debut_traitement = datetime.now() 
-print("Début du traitement: %s " % debut_traitement)
+traitement_debut = datetime.now() 
+print("Début du traitement: %s " % traitement_debut)
 
 # Page à scraper
 #source_url = 'https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible'
@@ -47,10 +47,10 @@ nombre_adonnes2 = nombre_abonnes[0].getText().strip()
 #print("Nombre d'abonnés:       %s" % nombre_adonnes2)
   
 #Fin du traitement
-fin_traitement = datetime.now() 
-print("Fin du traitement: %s " % fin_traitement)
+traitement_fin = datetime.now() 
+print("Fin du traitement: %s " % traitement_fin)
 
-duree = fin_traitement - debut_traitement
-print(duree)
+traitement_duree = traitement_fin - traitement_debut
+print(@Durée du traitement: %s" % traitement_duree)
   
   
