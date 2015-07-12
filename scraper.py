@@ -45,7 +45,7 @@ projet = soup.find_all('title')
 #print(description)
 
 onglet_commentaires = soup.find('a',{"href":"#tabs-0-footer-2"})
-onglet_commentaires = onglet_commentaires.replace('Commentaires (','')
+onglet_commentaires = onglet_commentaires.replace("Commentaires (","")
 
 #Extraire le chiffre du libellé de l'onglet
 
