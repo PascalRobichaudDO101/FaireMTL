@@ -34,7 +34,7 @@ onglet_commentaires = onglet_commentaires.replace(")","")
 print("Nombre de commentaires: %s" % onglet_commentaires)	   
 
 #2. Nombre d'abonnés
-#nombre_abonnes = soup.find_all('div',{'class':'pill js-subscribe_section_content'}, encode="utf-8")
+nombre_abonnes = soup.find_all('div',{'class':'pill js-subscribe_section_content'})
 #print("Nombre d'abonnés:       %s" % nombre_adonnes)
 #foutput_debug.writerow(nombre_adonnes)             
 #nombre_adonnes2 = nombre_abonnes[0].getText().strip()
