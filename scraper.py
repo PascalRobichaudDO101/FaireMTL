@@ -17,6 +17,7 @@ import urllib
 from bs4 import BeautifulSoup
 
 debut_traitement = datetime.now() 
+print(debut_traitement)
 
 # Page à scraper
 #source_url = 'https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible'
