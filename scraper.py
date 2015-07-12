@@ -51,6 +51,6 @@ traitement_fin = datetime.now()
 print("Fin du traitement: %s " % traitement_fin)
 
 traitement_duree = traitement_fin - traitement_debut
-print(@Durée du traitement: %s" % traitement_duree)
+print("Durée du traitement: %s" % traitement_duree)
   
   
