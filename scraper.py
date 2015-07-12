@@ -1,10 +1,5 @@
 # coding: utf8
 
-# toutes les chaines sont en unicode (même les docstrings)
-#from __future__ import unicode_literals
-
-#import requests
-#import chardet
 import urllib
 from bs4 import BeautifulSoup
 #import Unidecode
