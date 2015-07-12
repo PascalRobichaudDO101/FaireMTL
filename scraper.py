@@ -12,6 +12,7 @@ def left(s, amount = 1, substring = ""):
            substring = substring[:amount]
         return substring + s[:-amount]
 
+from datetime import datetime, date, time
 import urllib
 from bs4 import BeautifulSoup
 
