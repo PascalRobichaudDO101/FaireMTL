@@ -16,6 +16,8 @@ from datetime import datetime, date, time
 import urllib
 from bs4 import BeautifulSoup
 
+debut_traitement = datetime.now() 
+
 # Page à scraper
 #source_url = 'https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible'
 source_url = 'https://fairemtl.ca/fr/24h-linnovation-volet-ville-intelligente'
