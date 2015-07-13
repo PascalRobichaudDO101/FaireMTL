@@ -38,6 +38,8 @@ projet = soup.find_all('h1')
 print(projet)
 projet2 = projet[0]
 print(projet2)
+projet2 = projet2.getText()
+
 
 
 # 1. Nombre de commentaires
