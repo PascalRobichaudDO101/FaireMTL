@@ -38,9 +38,10 @@ projet = soup.find_all('h1')
 print(projet)
 projet2 = projet[0]
 print(projet2)
-projet2 = projet2.getText()
-
-
+projet3 = projet2.getText()
+print(projet3)
+projet4 = projet3.strip()
+print(projet4)
 
 # 1. Nombre de commentaires
 onglet_commentaires = soup.find("a",{"href":"#tabs-0-footer-2"})
