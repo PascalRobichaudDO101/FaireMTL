@@ -39,7 +39,7 @@ print(projet)
 projet2 = projet[0]
 print(projet2)
 projet3 = projet2.getText()
-#print(projet3)
+print(projet3.decode("utf-8"))
 #La prochaine ligne cause une erreur
 #Traceback (most recent call last):
 #   File "scraper.py", line 42, in <module>
