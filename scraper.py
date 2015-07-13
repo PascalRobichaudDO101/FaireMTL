@@ -35,6 +35,7 @@ html = urllib.urlopen(source_url)
 soup = BeautifulSoup(html)
 
 projet = soup.find_all('h1')
+print(projet)
 
 # 1. Nombre de commentaires
 onglet_commentaires = soup.find("a",{"href":"#tabs-0-footer-2"})
