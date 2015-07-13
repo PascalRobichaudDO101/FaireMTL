@@ -40,11 +40,6 @@ projet2 = projet[0]
 print(projet2)
 projet3 = projet2.getText()
 print(projet3.encode("utf-8"))
-#La prochaine ligne cause une erreur
-#Traceback (most recent call last):
-#   File "scraper.py", line 42, in <module>
-#     print(projet3)
-# UnicodeEncodeError: 'ascii' codec can't encode character u'\u2019' in position 8: ordinal not in range(128)
 projet4 = projet3.strip()
 print(projet4.encode("utf-8"))
 
