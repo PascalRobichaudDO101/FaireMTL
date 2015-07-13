@@ -45,8 +45,8 @@ print(projet3.encode("utf-8"))
 #   File "scraper.py", line 42, in <module>
 #     print(projet3)
 # UnicodeEncodeError: 'ascii' codec can't encode character u'\u2019' in position 8: ordinal not in range(128)
-#projet4 = projet3.strip()
-#print(projet4)
+projet4 = projet3.strip()
+print(projet4.encode("utf-8"))
 
 # 1. Nombre de commentaires
 onglet_commentaires = soup.find("a",{"href":"#tabs-0-footer-2"})
