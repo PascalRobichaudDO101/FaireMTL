@@ -34,6 +34,8 @@ html = urllib.urlopen(source_url)
 #Mettre la code de la page dans BeautifulSoup
 soup = BeautifulSoup(html)
 
+projet = soup.find_all('h1')
+
 # 1. Nombre de commentaires
 onglet_commentaires = soup.find("a",{"href":"#tabs-0-footer-2"})
 onglet_commentaires = onglet_commentaires.getText()
