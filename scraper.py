@@ -1,82 +1,35 @@
-# coding: utf8
+#!/usr/bin/env python
 
-#Scraper pour le site FaireMTl.ca
-#Version 3.0, 2015-07-12
+import pyquery
+import re
 
-#Fonction left
-def left(s, amount = 1, substring = ""):
-    if (substring == ""):
-        return s[:amount]
+ROOT = 'https://fairemtl.ca'
+dom = pyquery.PyQuery('%s/fr/projets' % ROOT)
+pages = int(dom.find('.pager-last a').attr('href').split('%2C')[-1])
+
+urls = []
+for page in range(0, pages + 1):
+    dom = pyquery.PyQuery('%s/fr/projets?page=0,%s' % (ROOT, page))
+    urls.extend("%s%s" % (ROOT, a.attrib['href']) for a in dom.find('h3 a'))
+
+for compteur, url in enumerate(urls):
+    dom = pyquery.PyQuery(url)
+    print "numero: %s" % (compteur + 1)
+    print "url: %s" % url
+    print "projet: %s" % dom.find('h1').text()
+    # description est parfois des <span>, parfois des <p>
+    span = dom.find('.pane-node-body span')
+    if span:
+        description = span[-1].text
     else:
-        if (len(substring) > amount):
-           substring = substring[:amount]
-        return substring + s[:-amount]
-
-from datetime import datetime, date, time
-import sqlite3
-import urllib
-from bs4 import BeautifulSoup
-
-#con = sqlite3.connect('url.db')
-#cur = con.cursor()
-#cur.execute("select * from url")
-#print cur.fetchone()
-
-traitement_debut = datetime.now() 
-print("Début du traitement: %s " % traitement_debut)
-
-# Page à scraper
-#source_url = 'https://fairemtl.ca/fr/affichage-dynamique-vers-stationnement-disponible'
-source_url = 'https://fairemtl.ca/fr/24h-linnovation-volet-ville-intelligente'
-print("Page: %s" % source_url)
-html = urllib.urlopen(source_url)
-
-#Mettre la code de la page dans BeautifulSoup
-soup = BeautifulSoup(html)
-
-projet = soup.find_all('h1')
-print(projet)
-projet2 = projet[0]
-print(projet2)
-projet3 = projet2.getText()
-print(projet3.encode("utf-8"))
-projet4 = projet3.strip()
-print(projet4.encode("utf-8"))
-
-# 1. Nombre de commentaires
-onglet_commentaires = soup.find("a",{"href":"#tabs-0-footer-2"})
-onglet_commentaires = onglet_commentaires.getText()
-onglet_commentaires = onglet_commentaires.replace("Commentaires (","")
-onglet_commentaires = onglet_commentaires.replace(")","")
-
-# Afficher le nombre de commentaires
-print("Nombre de commentaires: %s" % onglet_commentaires)	   
-
-#2. Nombre d'abonnés
-nombre_abonnes = soup.find_all('div',{'class':'pill js-subscribe_section_content'})
-#print("Nombre d'abonnés:       %s" % nombre_adonnes)
-#foutput_debug.writerow(nombre_adonnes)             
-nombre_adonnes2 = nombre_abonnes[0].getText().strip()
-position_espace = nombre_adonnes2.find(' ')
-nombre_adonnes2 = left(nombre_adonnes2, position_espace - 1)
-#print("Nombre d'abonnés:       %s" % nombre_adonnes2)
-print("Nombre de abonnes:      %s" % nombre_adonnes2)
-#print(nombre_adonnes2)
-  
-#3. Nombre d'appuis
-nombre_appuis = soup.find_all('div',{'class':'pill js-support_project'})
-#print("Nombre d'appuis:        %s" % nombre_appuis)
-#foutput_debug.writerow(nombre_appuis) 
-nombre_appuis2 = nombre_appuis[0].getText().strip()
-position_espace = nombre_appuis2.find(' ')
-nombre_appuis2 = left(nombre_appuis2, position_espace - 1)
-print("Nombre d'appuis:        %s" % nombre_appuis2)
-
-#Fin du traitement
-traitement_fin = datetime.now() 
-print("Fin du traitement: %s " % traitement_fin)
-
-traitement_duree = traitement_fin - traitement_debut
-print("Durée du traitement: %s" % traitement_duree)
+        p = dom.find('.pane-node-body p')
+        description = " ".join([e.text for e in p])
+    print "description: %s" % description
+    print "nombre_commentaires: %s" % re.findall(
+        r'[0-9]+', dom.find('#tabs-0-footer li.last a')[0].text)[0]
+    print "nombre_abonnes: %s" % dom.find(
+        '.js-subscribe_section_content span.count').text()
+    print "nombre_appuis: %s" % dom.find(
+        '.js-support_project span.count').text()
   
   
